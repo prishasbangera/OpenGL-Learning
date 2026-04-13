@@ -19,7 +19,7 @@ const GLchar* fragmentShaderSource = "#version 330 core\n"
 "out vec4 color;\n"
 "void main()\n"
 "{\n"
-" color = vec4(ourcolor,1.0f);\n"
+" color = vec4(1.0, 0.0, 0.0,1.0f);\n"
 "}\n\0";
 
 int main() {
@@ -56,6 +56,7 @@ int main() {
 
     unsigned int shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, fragmentShader);
+    glAttachShader(shaderProgram, vertexShader);
     glLinkProgram(shaderProgram);
 
     // Set up vertex data, VBO, VAO

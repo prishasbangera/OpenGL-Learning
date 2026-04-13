@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\GLFW\glfw-3.4\include;C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\include</ExternalIncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);"C:\GLFW\glfw-3.4\build\src\Debug"</LibraryPath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\GLFW\glfw-3.4\build\src\Debug</LibraryPath>
     <IncludePath>C:\GLFW\glfw-3.4\include;C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\include;"C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\include";$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

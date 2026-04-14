@@ -1,0 +1,116 @@
+﻿  Building Custom Rule C:/Users/Prisha Bangera/Documents/GitHub/OpenGL Learning/TemplateOpenGLProject/Raytracing/ray_tracing_starter/CMakeLists.txt
+cl : command line  warning D9002: ignoring unknown option '-pthread'
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ppltasks.h(1580,21): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../main.cpp')
+  
+  Scene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Scene.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Sphere.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Sphere.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Vector3.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Vector3.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Camera.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Camera.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Lambertian.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Lambertian.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Metal.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Metal.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Material.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Material.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Dielectric.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Dielectric.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Movement.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  (compiling source file '../Movement.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(425,13):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(684,75):
+          see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+          while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+              C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\Vector3.h(189,57):
+              see the first reference to 'std::basic_ostream<char,std::char_traits<char>>::operator <<' in 'operator <<'
+  
+  Generating Code...
+  ray_tracing_starter.vcxproj -> C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\Raytracing\ray_tracing_starter\build\Debug\ray_tracing_starter.exe

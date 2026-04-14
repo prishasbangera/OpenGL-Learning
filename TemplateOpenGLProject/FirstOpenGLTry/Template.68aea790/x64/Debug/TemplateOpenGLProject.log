@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\main.cpp(136,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\main.cpp(136,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\main.cpp(136,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  TemplateOpenGLProject.vcxproj -> C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\x64\Debug\TemplateOpenGLProject.exe

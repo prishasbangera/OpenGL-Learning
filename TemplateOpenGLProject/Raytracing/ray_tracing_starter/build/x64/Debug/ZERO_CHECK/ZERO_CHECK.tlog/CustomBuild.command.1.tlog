@@ -1,0 +1,10 @@
+^C:\USERS\PRISHA BANGERA\DOCUMENTS\GITHUB\OPENGL LEARNING\TEMPLATEOPENGLPROJECT\RAYTRACING\RAY_TRACING_STARTER\BUILD\CMAKEFILES\886F8A73DB1EE2AFAE5FCB4BE5865EF4\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Prisha Bangera/Documents/GitHub/OpenGL Learning/TemplateOpenGLProject/Raytracing/ray_tracing_starter" "-BC:/Users/Prisha Bangera/Documents/GitHub/OpenGL Learning/TemplateOpenGLProject/Raytracing/ray_tracing_starter/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Prisha Bangera/Documents/GitHub/OpenGL Learning/TemplateOpenGLProject/Raytracing/ray_tracing_starter/build/ray_tracing_starter.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

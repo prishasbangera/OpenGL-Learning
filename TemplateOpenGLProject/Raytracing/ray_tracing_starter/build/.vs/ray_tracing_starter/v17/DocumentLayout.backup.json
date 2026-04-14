@@ -1,0 +1,44 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Prisha Bangera\\Documents\\GitHub\\OpenGL Learning\\TemplateOpenGLProject\\Raytracing\\ray_tracing_starter\\build\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6035258A-C7DF-3ADD-A285-0C34DA626D96}|ray_tracing_starter.vcxproj|C:\\Users\\Prisha Bangera\\Documents\\GitHub\\OpenGL Learning\\TemplateOpenGLProject\\Raytracing\\ray_tracing_starter\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Prisha Bangera\\Documents\\GitHub\\OpenGL Learning\\TemplateOpenGLProject\\Raytracing\\ray_tracing_starter\\main.cpp",
+              "RelativeDocumentMoniker": "..\\main.cpp",
+              "ToolTip": "C:\\Users\\Prisha Bangera\\Documents\\GitHub\\OpenGL Learning\\TemplateOpenGLProject\\Raytracing\\ray_tracing_starter\\main.cpp",
+              "RelativeToolTip": "..\\main.cpp",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-13T16:13:08.485Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

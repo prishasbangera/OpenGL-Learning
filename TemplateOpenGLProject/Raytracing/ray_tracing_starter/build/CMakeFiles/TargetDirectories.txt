@@ -1,3 +1,0 @@
-C:/Users/Prisha Bangera/Documents/GitHub/OpenGL Learning/TemplateOpenGLProject/Raytracing/ray_tracing_starter/build/CMakeFiles/ray_tracing_starter.dir
-C:/Users/Prisha Bangera/Documents/GitHub/OpenGL Learning/TemplateOpenGLProject/Raytracing/ray_tracing_starter/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Prisha Bangera/Documents/GitHub/OpenGL Learning/TemplateOpenGLProject/Raytracing/ray_tracing_starter/build/CMakeFiles/ZERO_CHECK.dir

@@ -28,7 +28,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="vertex.vert" />
-    <None Include="fragment.frag" />
+    <None Include="fragment.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="vertex.vert">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

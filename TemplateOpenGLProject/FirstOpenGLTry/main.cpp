@@ -93,6 +93,7 @@ int main() {
 
     // Set up vertex data, VBO, VAO
 
+    // coordinates are in ndc
     float vertices[] = {
         0.5f,  0.5f, 0.0f,  // top right
         0.5f, -0.5f, 0.0f,  // bottom right
@@ -100,21 +101,23 @@ int main() {
         -0.5f,  0.5f, 0.0f   // top left 
     };
 
-    float indices[] = {
+    unsigned int indices[] = {
         0, 1, 3,
         1, 2, 3
     };
 
+
+    // VBO: stores verdex data in GPU memory
     unsigned int VBO, VAO, EBO; // vertex buffer object, vertex array object
     glGenVertexArrays(1, &VAO);
 
     glGenBuffers(1, &VBO); // generate VBO with buffer id
     glGenBuffers(1, &EBO);
 
-    glBindVertexArray(VAO);
+    glBindVertexArray(VAO); // VAO BIND
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO); // bind VBO to vertex buffer object type
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // also dynamic draw and stream draw
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
@@ -124,7 +127,9 @@ int main() {
     glEnableVertexAttribArray(0); // vertexe attrib location as argument
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
+    glBindVertexArray(0); // VAO UNBIND
+
+    // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); Or GL Fill
 
     // Render Loop
     
@@ -152,6 +157,11 @@ int main() {
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
     glDeleteProgram(shaderProgram);
+
+    // Get number of vertex attribs available
+    int numAttribs = 0;
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &numAttribs);
+    std::cout << "Max vertex attribs: " << numAttribs << std::endl;
 
     glfwTerminate();
     return 0;

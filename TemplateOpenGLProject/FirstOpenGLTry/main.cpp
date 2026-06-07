@@ -2,21 +2,31 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+#define OURCOLOR "ourColor"
+
 using namespace std;
 
-const GLchar* vertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n"
+const GLchar* vertexShaderSource ="#version 330 core\n"
+"layout(location = 0) in vec3 aPos; // the position variable has attribute position 0\n"
+"layout (location = 1) in vec3 aColor2;\n"
+"out vec3 vertexColor; // specify a color output to the fragment shader\n"
 "void main()\n"
-"{\n"
-" gl_Position = vec4(aPos,1.0);\n"
-"}\0";
+"{\n"    
+"gl_Position = vec4(aPos, 1.0); // see how we directly give a vec3 to vec4's constructor\n"
+"//vertexColor = vec4(aPos.x, 0.0, 0.0); // set the output variable to a dark-red color\n"  
+" vertexColor = aColor2;\n"
+"}\n";
 
 const GLchar* fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
+"in vec3 vertexColor;\n"
+
+"uniform vec4 ourColor;\n"
+
 "void main()\n"
 "{\n"
-" FragColor = vec4(1.0, 0.0, 0.0,1.0f);\n"
-"}\n\0";
+"  FragColor = vec4( vec4(vertexColor, 1.0) +" OURCOLOR "); \n"
+"}\n";
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -80,6 +90,7 @@ int main() {
     if (!success) {
         glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+        return 1;
     }
 
     unsigned int shaderProgram = glCreateProgram();
@@ -95,16 +106,17 @@ int main() {
 
     // coordinates are in ndc
     float vertices[] = {
-        0.5f,  0.5f, 0.0f,  // top right
-        0.5f, -0.5f, 0.0f,  // bottom right
-        -0.5f, -0.5f, 0.0f,  // bottom left
-        -0.5f,  0.5f, 0.0f   // top left 
+        // positions         // colors
+         0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // bottom right
+        -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // bottom left
+         0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // top 
     };
 
     unsigned int indices[] = {
         0, 1, 3,
         1, 2, 3
     };
+
 
 
     // VBO: stores verdex data in GPU memory
@@ -123,8 +135,13 @@ int main() {
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
     
     // location = 0, vec3, floating point, normaled?, stride, offset 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    // position
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0); // vertexe attrib location as argument
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1); // vertexe attrib location as argument
+
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0); // VAO UNBIND
@@ -141,7 +158,14 @@ int main() {
         glClearColor(0.2, 0.3, 0.3, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        // Passing in a unforim
+        float timeValue = glfwGetTime();
+        float greenVal = (sin(timeValue) / 2.0f) + 0.5f;
+        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+
         glUseProgram(shaderProgram);
+        glUniform4f(vertexColorLocation, 0.0f, greenVal, 0.0f, 1.0f);
+
         glBindVertexArray(VAO); // technically no need
         //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

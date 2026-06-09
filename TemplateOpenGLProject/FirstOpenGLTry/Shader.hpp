@@ -1,13 +1,14 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#define BUF_SIZE (1024)
 #include <glad/glad.h>
 
 #include <string>
 #include <fstream>
 #include <sstream>
 #include <iostream>
+
+#define BUF_SIZE (1024)
 
 class Shader
 {
@@ -58,7 +59,7 @@ private:
 		else {
 			glGetProgramiv(shader, GL_LINK_STATUS, &success);
 			if (!success) {
-				glGetProgramInfoLog(shader, BUF)SIZE, NULL, infoLog);
+				glGetProgramInfoLog(shader, BUF_SIZE, NULL, infoLog);
 				std::cout << "ERROR::PROGRAM_LINKING_ERROR of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
 
 			}

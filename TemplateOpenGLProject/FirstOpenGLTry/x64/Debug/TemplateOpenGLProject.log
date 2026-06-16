@@ -1,6 +1,1 @@
-﻿  main.cpp
-C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\main.cpp(103,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\main.cpp(103,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\main.cpp(103,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\FirstOpenGLTry\main.cpp(107,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  TemplateOpenGLProject.vcxproj -> C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\x64\Debug\TemplateOpenGLProject.exe
+﻿  TemplateOpenGLProject.vcxproj -> C:\Users\Prisha Bangera\Documents\GitHub\OpenGL Learning\TemplateOpenGLProject\x64\Debug\TemplateOpenGLProject.exe

@@ -139,10 +139,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\glad\glad.h" />
+    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="fragment.frag" />
     <None Include="vertex.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="image.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

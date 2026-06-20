@@ -66,75 +66,8 @@ int main() {
         1, 2, 3
     };
 
-//#region TEXTURES
+       ////////////// Set up and vertex data and buffers, configure vertex attribs
 
-    // Texture coordinates
-    /*float texCoord[] = {
-        0.0f, 0.0f,
-        1.0f, 0.0f,
-        0.5f, 1.0f
-    };*/
-
-    // creating the texture
-    unsigned int texture;
-    glGenTextures(1, &texture); // how many textures, stores in array
-
-    glBindTexture(GL_TEXTURE_2D, texture);
-
-    // Default behavior -> repeat texture when outside (ignore int part)
-    // GL_REPEAT: default
-    // GL_MIRRORED_REPEAT: mirrors the image with each repeat
-    // GL_CLAMP_TO_EDGE: clamps the coord between 0 and 1, stretched edge
-    // GL_CLAMP_TO_BORDER: clamps without stretched edge
-
-    // texture target, what option (S vs T axis)
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
-
-    // When using clamp to border
-    float borderColor[] = { 1.0f, 1.0f, 0.0f, 1.0f };
-    glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
-
-    // Texture Filtering
-    // GL_NEAREST - default, selects closes texel
-    // GL_LINEAR - bilinear -> interpolated value based on dist from texture coorod
-    // etc
-    // minifying: use nearest when textures scaled down
-    // mag: use linear when textures scaled up
-    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    // Mipmaps:
-    // texture images which each is twidxe as small
-    // glGenerateeMipmap
-    // can specify filter method between mipmap levels
-    /*
-        GL_NEAREST_MIPMAP_NEAREST
-        GL_LINEAR_MIPMAP_NEAREST
-        cannot set mipmap filter option as mag field - miopmaps used when downscalinf, texture mag doesnt use mipmaps
-
-    */
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    // Creating a texture 
-    string filename = "image.jpg";
-    int twidth, theight, numClrChannels;
-    unsigned char* data = stbi_load(filename.c_str(), &twidth, &theight, &numClrChannels, 0);
-
-    if (data) {
-
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, twidth, theight, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        // can generate mipmaps here
-    }
-    else {
-        std::cout << "Failed to load texture." << std::endl;
-    }
-
-    stbi_image_free(data);
-
-
-//#end region
 
     // VBO: stores verdex data in GPU memory
     unsigned int VBO, VAO, EBO; // vertex buffer object, vertex array object
@@ -170,6 +103,101 @@ int main() {
 
     // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); Or GL Fill
 
+        // Texture coordinates
+    /*float texCoord[] = {
+        0.0f, 0.0f,
+        1.0f, 0.0f,
+        0.5f, 1.0f
+    };*/
+
+    // ///////////////////creating the texture
+    unsigned int texture1, texture2;
+
+    glGenTextures(1, &texture1); // how many textures, stores in array
+    glBindTexture(GL_TEXTURE_2D, texture1);
+
+    // Default behavior -> repeat texture when outside (ignore int part)
+    // GL_REPEAT: default
+    // GL_MIRRORED_REPEAT: mirrors the image with each repeat
+    // GL_CLAMP_TO_EDGE: clamps the coord between 0 and 1, stretched edge
+    // GL_CLAMP_TO_BORDER: clamps without stretched edge
+
+    // texture target, what option (S vs T axis)
+    // texture wrapping aparametesr
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+    // When using clamp to border
+    float borderColor[] = { 1.0f, 1.0f, 0.0f, 1.0f };
+    glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
+
+    // Texture Filtering
+    // GL_NEAREST - default, selects closes texel
+    // GL_LINEAR - bilinear -> interpolated value based on dist from texture coorod
+    // etc
+    // minifying: use nearest when textures scaled down
+    // mag: use linear when textures scaled up
+    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    // Mipmaps:
+    // texture images which each is twidxe as small
+    // glGenerateeMipmap
+    // can specify filter method between mipmap levels
+    /*
+        GL_NEAREST_MIPMAP_NEAREST
+        GL_LINEAR_MIPMAP_NEAREST
+        cannot set mipmap filter option as mag field - miopmaps used when downscalinf, texture mag doesnt use mipmaps
+
+    */
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    // Creating a texture 
+    int twidth, theight, numClrChannels;
+    stbi_set_flip_vertically_on_load(true);
+    unsigned char* data = stbi_load("image.jpg", &twidth, &theight, &numClrChannels, 0);
+
+    if (data) {
+
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, twidth, theight, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        // can generate mipmaps here
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else {
+        std::cout << "Failed to load texture." << std::endl;
+    }
+
+    stbi_image_free(data);
+
+    // texture 2
+    glGenTextures(1, &texture2);
+    glBindTexture(GL_TEXTURE_2D, texture2);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    data = stbi_load("image2.png", &twidth, &theight, &numClrChannels, 0);
+
+    if (data) {
+
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, twidth, theight, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        // can generate mipmaps here
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else {
+        std::cout << "Failed to load texture." << std::endl;
+    }
+    stbi_image_free(data);
+
+    // Tell opengl for each smapler which texture eunit it belongs to
+    shaderProgram.use();
+    // glUniform1i(glGetUniformLocation(shaderProgram.ID, "texture1"), 0); // manually
+    shaderProgram.setInt("texture2", 1);
+
+
     // Render Loop
     
     while (!glfwWindowShouldClose(window)) {
@@ -185,14 +213,18 @@ int main() {
         float greenVal = (sin(timeValue) / 2.0f) + 0.5f;
         
         int vertexColorLocation = glGetUniformLocation(shaderProgram.ID, "ourColor");
-
-        shaderProgram.use();
         glUniform4f(vertexColorLocation, 0.0f, greenVal, 0.0f, 1.0f);
 
-        glBindTexture(GL_TEXTURE_2D, texture);
-        glBindVertexArray(VAO); // technically no need
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, texture1);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, texture2);
+
         
         //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        shaderProgram.use();
+
+        glBindVertexArray(VAO); // technically no need
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         //glBindVertexArray(0); no need to unbind it every time
         //glDrawArrays(GL_TRIANGLES, 0, 6); // start index, how many vertices
